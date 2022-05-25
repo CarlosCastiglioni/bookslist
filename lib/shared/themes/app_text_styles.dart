@@ -13,4 +13,9 @@ class TextStyles {
     fontWeight: FontWeight.w700,
     color: AppColors.grey,
   );
+  static final menu = GoogleFonts.roboto(
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    color: AppColors.secondary,
+  );
 }

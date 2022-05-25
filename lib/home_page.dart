@@ -1,7 +1,9 @@
 import 'package:bookslist/shared/themes/app_colors.dart';
-import 'package:bookslist/shared/themes/app_text_styles.dart';
-import 'package:bookslist/shared/widgets/app_bar_widget.dart';
-import 'package:bookslist/shared/widgets/bottom_navigation_widget.dart';
+import 'package:bookslist/shared/widgets/app_bar/app_bar_widget.dart';
+import 'package:bookslist/shared/widgets/books_library/books_library_widget.dart';
+import 'package:bookslist/shared/widgets/bottom_navigation/bottom_navigation_widget.dart';
+import 'package:bookslist/shared/widgets/favorite_authors/favorite_authors_widget.dart';
+import 'package:bookslist/shared/widgets/favorite_books/favorite_books_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -19,18 +21,10 @@ class HomePage extends StatelessWidget {
           child: Container(
             color: AppColors.backgroundBody,
             child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Livros favoritos",
-                      style: TextStyles.title,
-                    ),
-                    TextButton(onPressed: () {}, child: const Text("ver todos"))
-                  ],
-                ),
-                Container(height: 100, child: ListView())
+              children: const [
+                FavoriteBooksWidget(),
+                FavoriteAuthorsWidget(),
+                BooksLibraryWidget(),
               ],
             ),
           ),
