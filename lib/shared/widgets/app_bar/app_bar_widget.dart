@@ -34,7 +34,7 @@ class AppBarWidget extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 19, top: 8),
+              padding: const EdgeInsets.only(left: 19),
               child: Row(
                 children: [
                   Container(

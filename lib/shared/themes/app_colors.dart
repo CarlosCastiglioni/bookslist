@@ -5,4 +5,5 @@ class AppColors {
   static const grey = Color(0xFF555555);
   static const secondary = Color(0xFFA076F2);
   static const backgroundBody = Color(0xFFF7F7F7);
+  static const border = Color(0xFFE0E0E0);
 }

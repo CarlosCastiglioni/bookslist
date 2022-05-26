@@ -9,9 +9,4 @@ class GraphqlClass {
 
   ValueNotifier<GraphQLClient> client = ValueNotifier<GraphQLClient>(
       GraphQLClient(link: linkr, cache: GraphQLCache(store: InMemoryStore())));
-
-  GraphQLClient clientToQuery() {
-    return GraphQLClient(
-        link: linkr, cache: GraphQLCache(store: InMemoryStore()));
-  }
 }
