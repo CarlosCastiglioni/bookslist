@@ -27,9 +27,9 @@ class AppBarWidget extends StatelessWidget {
                 Container(
                   height: 32,
                   width: 32,
-                  decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.circular(50)),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(50)),
+                  child: Image.asset("assets/images/avatar.png"),
                 )
               ],
             ),

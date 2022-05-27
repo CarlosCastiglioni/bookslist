@@ -41,43 +41,49 @@ class BooksLibraryWidget extends StatelessWidget {
                       final repository = repositories[i];
                       return SizedBox(
                         height: 69,
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 70,
-                              width: 48,
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: NetworkImage(repository["cover"]),
-                                      fit: BoxFit.cover),
-                                  borderRadius: BorderRadius.circular(8)),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 10.0),
-                              child: SizedBox(
-                                width: 272,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      repository["name"],
-                                      style: TextStyles.list,
-                                      overflow: TextOverflow.ellipsis,
-                                      maxLines: 2,
-                                    ),
-                                    const SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      repository["author"]["name"],
-                                      style: TextStyles.listSubtitle,
-                                    ),
-                                  ],
-                                ),
+                        child: GestureDetector(
+                          onTap: () => Navigator.pushNamed(context, "/book",
+                              arguments: repository),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 70,
+                                width: 48,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image:
+                                            NetworkImage(repository["cover"]),
+                                        fit: BoxFit.cover),
+                                    borderRadius: BorderRadius.circular(8)),
                               ),
-                            )
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                child: SizedBox(
+                                  width: 272,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        repository["name"],
+                                        style: TextStyles.list,
+                                        overflow: TextOverflow.ellipsis,
+                                        maxLines: 2,
+                                      ),
+                                      const SizedBox(
+                                        height: 5,
+                                      ),
+                                      Text(
+                                        repository["author"]["name"],
+                                        style: TextStyles.listSubtitle,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       );
                     })),

@@ -38,4 +38,9 @@ class TextStyles {
     fontWeight: FontWeight.w700,
     color: AppColors.grey,
   );
+  static final authorDescription = GoogleFonts.roboto(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColors.lightGrey,
+  );
 }
